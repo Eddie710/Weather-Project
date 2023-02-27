@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Az Weather</title>
+    
+</head>
+<body>
+    <div>City: <p id="city"></p></div>
+    <div>Condition: <p id="con"></p></div>
+    <div>Temperature: <p id="temp"></p></div>
+    <button id="random" onclick="rando()">Generate Value</button>
+</body>
+<script>
+    const city=["Surprise", "Glendale", "Maricopa", "Gilbert", "Buckeye", "Cave Creek", "Phoenix", "Tuscon", "Mesa", "Scottsdale" ]
+    const cond=["clear","cloudy","raining","snowing","hailing","dry lightning"]
+    const weather=['33°', '92°', "102°", '5232142°', '-12555°', "71°", "0°", "69°", "74°", "420°"]
+
+    const cityValue = document.getElementById("city")
+    const condValue = document.getElementById("con")
+    const tempValue = document.getElementById("temp")
+
+    function rando(){
+        cityValue.innerHTML = city[Math.round(Math.random()*9)];
+        condValue.innerHTML = cond[Math.round(Math.random()*5)];
+        tempValue.innerHTML = weather[Math.round(Math.random()*9)];
+    }
+</script>
+</html>
